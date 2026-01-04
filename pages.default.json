@@ -1,0 +1,28 @@
+{
+    "pages": [
+        {
+            "path": "pages/home/home",
+            "style": {
+                // #if PLATFORM === 'MP-WEIXIN'
+                "navigationBarTitleText": "知乎故事",
+                // #else
+                "navigationBarTitleText": "知乎小说",
+                // #endif  
+                "enablePullDownRefresh": true
+            }
+        }
+    ],
+    // #if PLATFORM === 'MP-WEIXIN'
+    "plugins": {
+        "novel-plugin": {
+            "version": "latest",
+            "provider": "wx293c4b6097a8a4d0",
+            "genericsImplementation": {
+                "novel": {
+                    "charge-dialog": "/components/novel-plugin/components/charge-dialog/charge-dialog"
+                }
+            }
+        }
+    }
+    // #endif  
+}
